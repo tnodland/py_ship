@@ -5,3 +5,7 @@ class Cell():
         self.coordinate = coordinate
         self.ship = None
         self.empty = True
+
+    def place_ship(self, ship):
+        self.empty = False
+        self.ship = ship
