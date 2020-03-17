@@ -15,10 +15,12 @@ class CellTest(unittest.TestCase):
         cruiser = Ship("cruiser", 1)
 
         self.assertTrue(cell.empty)
+        self.assertEqual(None, cell.ship)
 
         cell.place_ship(cruiser)
 
         self.assertFalse(cell.empty)
+        self.assertEqual(cruiser, cell.ship)
 
 
 if __name__ == '__main__':
