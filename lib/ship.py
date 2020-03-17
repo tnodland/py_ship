@@ -6,3 +6,9 @@ class Ship():
 
     def hit(self):
         self.health -= 1
+
+    def sunk(self):
+        if self.health > 0:
+            return False
+        else:
+            return True
