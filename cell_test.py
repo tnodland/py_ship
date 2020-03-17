@@ -8,7 +8,18 @@ class CellTest(unittest.TestCase):
 
         self.assertEqual("B4", cell.coordinate)
         self.assertEqual(None, cell.ship)
-        self.assertEqual(True, cell.empty)
+        self.assertTrue(cell.empty)
+
+    def test_cell_can_place_a_ship(self):
+        cell = Cell("B4")
+        cruiser = Ship("cruiser", 1)
+
+        self.assertTrue(cell.empty)
+
+        cell.place_ship(cruiser)
+
+        self.assertFalse(cell.empty)
+
 
 if __name__ == '__main__':
     unittest.main()
