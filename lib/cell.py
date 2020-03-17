@@ -5,6 +5,7 @@ class Cell():
         self.coordinate = coordinate
         self.ship = None
         self.empty = True
+        self.fired_upon = False
 
     def place_ship(self, ship):
         if self.empty:
