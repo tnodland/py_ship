@@ -18,5 +18,14 @@ class ShipTest(unittest.TestCase):
 
         self.assertEqual(cruiser.health, 2)
 
+    def test_ship_can_be_sunk(self):
+        cruiser = Ship("cruiser", 1)
+
+        self.assertFalse(cruiser.sunk())
+
+        cruiser.hit()
+
+        self.assertTrue(cruiser.sunk())
+
 if __name__ == '__main__':
     unittest.main()
