@@ -7,7 +7,7 @@ class ShipTest(unittest.TestCase):
 
         self.assertEqual("Cruiser", cruiser.name)
         self.assertEqual(3, cruiser.length)
-        
+        self.assertEqual(3, cruiser.health)
 
 
 if __name__ == '__main__':
