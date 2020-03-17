@@ -22,6 +22,24 @@ class CellTest(unittest.TestCase):
         self.assertFalse(cell.empty)
         self.assertEqual(cruiser, cell.ship)
 
+    def test_cell_cant_place_a_ship_if_not_empty(self):
+        cell = Cell("B4")
+        cruiser = Ship("cruiser", 1)
+        cruiser2 = Ship("cruiser2", 1)
+
+        self.assertTrue(cell.empty)
+        self.assertEqual(None, cell.ship)
+
+        cell.place_ship(cruiser)
+
+        self.assertFalse(cell.empty)
+        self.assertEqual(cruiser, cell.ship)
+
+        cell.place_ship(cruiser2)
+
+        self.assertFalse(cell.empty)
+        self.assertEqual(cruiser, cell.ship)        
+
 
 if __name__ == '__main__':
     unittest.main()
