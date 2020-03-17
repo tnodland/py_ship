@@ -7,5 +7,6 @@ class Cell():
         self.empty = True
 
     def place_ship(self, ship):
-        self.empty = False
-        self.ship = ship
+        if self.empty:
+            self.empty = False
+            self.ship = ship
