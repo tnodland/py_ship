@@ -13,7 +13,9 @@ class ShipTest(unittest.TestCase):
         cruiser = Ship("Cruiser", 3)
 
         self.assertEqual(cruiser.health, 3)
-        cruiser.hit
+
+        cruiser.hit()
+
         self.assertEqual(cruiser.health, 2)
 
 if __name__ == '__main__':

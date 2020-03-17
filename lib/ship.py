@@ -3,3 +3,6 @@ class Ship():
         self.name = name
         self.length = length
         self.health = length
+
+    def hit(self):
+        self.health -= 1
