@@ -41,6 +41,19 @@ class CellTest(unittest.TestCase):
         self.assertFalse(cell.empty)
         self.assertEqual(cruiser, cell.ship)
 
+    def test_cell_can_be_fired_upon(self):
+        cell = Cell("B4")
+        cruiser = Ship("cruiser", 1)
+
+        cell.place_ship(cruiser)
+
+        assertFalse(cell.fired_upon)
+        assertEqual(1, ship.health)
+
+        cell.fire_upon()
+
+        assertTrue(cell.fired_upon)
+        assertEqual(0, ship.health)
 
 if __name__ == '__main__':
     unittest.main()
