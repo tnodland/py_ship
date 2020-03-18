@@ -55,5 +55,28 @@ class CellTest(unittest.TestCase):
         self.assertTrue(cell.fired_upon)
         self.assertEqual(0, cruiser.health)
 
+    def test_cell_rendering(self):
+        cell1 = Cell("B4")
+        cell2 = Cell("C5")
+        cell3 = Cell("D6")
+        cruiser1 = Ship("cruiser", 1)
+        cruiser2 = Ship("cruiser", 2)
+
+        cell1.place_ship(cruiser1)
+        cell2.place_ship(cruiser2)
+
+        assertEqual(".", cell1.render())
+        assertEqual(".", cell2.render())
+        assertEqual(".", cell3.render())
+
+        cell1.fire_upon()
+        cell2.fire_upon()
+        cell3.fire_upon()
+
+        assertEqual("X", cell1.render())
+        assertEqual("H", cell2.render())
+        assertEqual("M", cell3.render())
+
+
 if __name__ == '__main__':
     unittest.main()
