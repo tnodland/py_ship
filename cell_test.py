@@ -47,13 +47,13 @@ class CellTest(unittest.TestCase):
 
         cell.place_ship(cruiser)
 
-        assertFalse(cell.fired_upon)
-        assertEqual(1, ship.health)
+        self.assertFalse(cell.fired_upon)
+        self.assertEqual(1, cruiser.health)
 
         cell.fire_upon()
 
-        assertTrue(cell.fired_upon)
-        assertEqual(0, ship.health)
+        self.assertTrue(cell.fired_upon)
+        self.assertEqual(0, cruiser.health)
 
 if __name__ == '__main__':
     unittest.main()

@@ -11,3 +11,8 @@ class Cell():
         if self.empty:
             self.empty = False
             self.ship = ship
+
+    def fire_upon(self):
+        self.fired_upon = True
+        if not self.empty:
+            self.ship.hit()
