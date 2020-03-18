@@ -16,3 +16,12 @@ class Cell():
         self.fired_upon = True
         if not self.empty:
             self.ship.hit()
+
+    def render(self):
+        if self.ship and self.ship.sunk():
+            return "X"
+        elif self.ship and self.fired_upon:
+            return "H"
+        elif self.empty and self.fired_upon:
+            return "M"
+        return "."

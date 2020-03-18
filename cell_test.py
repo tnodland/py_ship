@@ -65,17 +65,17 @@ class CellTest(unittest.TestCase):
         cell1.place_ship(cruiser1)
         cell2.place_ship(cruiser2)
 
-        assertEqual(".", cell1.render())
-        assertEqual(".", cell2.render())
-        assertEqual(".", cell3.render())
+        self.assertEqual(".", cell1.render())
+        self.assertEqual(".", cell2.render())
+        self.assertEqual(".", cell3.render())
 
         cell1.fire_upon()
         cell2.fire_upon()
         cell3.fire_upon()
 
-        assertEqual("X", cell1.render())
-        assertEqual("H", cell2.render())
-        assertEqual("M", cell3.render())
+        self.assertEqual("X", cell1.render())
+        self.assertEqual("H", cell2.render())
+        self.assertEqual("M", cell3.render())
 
 
 if __name__ == '__main__':
