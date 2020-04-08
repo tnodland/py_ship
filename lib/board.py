@@ -2,5 +2,5 @@ from lib.ship import Ship
 from lib.cell import Cell
 
 class Board():
-    def __init__():
-        
+    def __init__self():
+        self.exists = True
