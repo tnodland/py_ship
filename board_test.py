@@ -6,5 +6,26 @@ from lib.board import Board
 class BoardTest(unittest.TestCase):
     def test_board_attributes(self):
         board = Board()
+        example = {
+            "A1": board.cells["A1"],
+            "A2": board.cells["A2"],
+            "A3": board.cells["A3"],
+            "A4": board.cells["A4"],
+            "B1": board.cells["B1"],
+            "B2": board.cells["B2"],
+            "B3": board.cells["B3"],
+            "B4": board.cells["B4"],
+            "C1": board.cells["C1"],
+            "C2": board.cells["C2"],
+            "C3": board.cells["C3"],
+            "C4": board.cells["C4"],
+            "D1": board.cells["D1"],
+            "D2": board.cells["D2"],
+            "D3": board.cells["D3"],
+            "D4": board.cells["D4"]
+        }
 
-        self.assertEqual(True, board.exists)
+        self.assertDictEqual(example, board.cells)
+
+if __name__ == '__main__':
+    unittest.main()
