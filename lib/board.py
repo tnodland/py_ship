@@ -21,3 +21,9 @@ class Board():
             "D3": Cell("D3"),
             "D4": Cell("D4")
         }
+
+    def valid_coordinate(self, coordinate):
+        if self.cells.get(coordinate):
+            return True
+        else:
+            return False
