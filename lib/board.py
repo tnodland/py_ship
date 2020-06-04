@@ -25,5 +25,4 @@ class Board():
     def valid_coordinate(self, coordinate):
         if self.cells.get(coordinate):
             return True
-        else:
-            return False
+        return False
