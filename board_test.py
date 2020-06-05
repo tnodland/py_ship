@@ -27,5 +27,16 @@ class BoardTest(unittest.TestCase):
 
         self.assertDictEqual(example, board.cells)
 
+    def test_valid_coordinates(self):
+        board = Board()
+
+        self.assertTrue(board.valid_coordinate("A1"))
+        self.assertTrue(board.valid_coordinate("A3"))
+        self.assertTrue(board.valid_coordinate("D3"))
+        
+        self.assertFalse(board.valid_coordinate("Q7"))
+        self.assertFalse(board.valid_coordinate("Coordinate"))
+        self.assertFalse(board.valid_coordinate("1A"))
+
 if __name__ == '__main__':
     unittest.main()
